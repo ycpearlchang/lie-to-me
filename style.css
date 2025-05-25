@@ -1,0 +1,110 @@
+body {
+  font-family: sans-serif;
+  background: #fdfdfd;
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0077cc;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+  flex: 1 1 auto;
+  max-width: 250px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+h2 {
+  margin: 10px 0 20px;
+}
+
+.player {
+  display: flex;
+  justify-content: center;
+}
+
+video {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.papers {
+  text-align: center;
+  font-size: 1.05em;
+  margin-bottom: 20px;
+}
+
+
+.papers a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.papers a:hover {
+  text-decoration: underline;
+}
+
+.meta {
+  margin-top: -10px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.poster-title {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.authors {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.authors a {
+  color: #303030;
+  text-decoration: none;
+}
+.authors a:hover {
+  text-decoration: underline;
+}
+
+.award {
+  font-size: 1rem;
+  color: #cc9900;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.affiliation a {
+  color: #505050;
+  text-decoration: none;
+}
+
+.affiliation a:hover {
+  text-decoration: underline;
+}
+
+.subtitle {
+  color: #505050;
+  margin-top: 0px;
+}

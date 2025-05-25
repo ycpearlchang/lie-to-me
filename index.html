@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lie to Me</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  
+  <div class="meta">
+    <h1>🕵️‍♀️ Lie to Me, Not to My AI</h1>
+    <h2 class="subtitle">Unmasking Scams with Large Language Models</h2>
+    <p class="authors">Yuan-Chen Pearl Chang & Esma Aimeur</p>
+    <p class="affiliation">
+      <a href="https://www-labs.iro.umontreal.ca/~talent/en/index.html" target="_blank">
+        AI for Cybersecurity Lab (AICS), Université de Montréal
+      </a>
+    </p>
+    <p class="award">🏆 Jury Prize – Journée de la recherche du DIRO 2025</p>
+  </div>
+
+
+  <!-- 🖼️ Poster Section (shown directly) -->
+  <div class="poster-section" style="text-align: center; margin: 40px 0;">
+  <img src="poster.png" alt="Research Poster" style="max-width: 50%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+  </div>
+  <div class="papers">
+  <div class="grid">
+    🔗 <a href="https://kibiddd.github.io/is_this_site_legit_LLMs_for_scam_website_detection.pdf" target="_blank">Read <em>“Is this site legit?”</em></a>
+    🔗 <a href="https://kibiddd.github.io/Chat_or_Trap_Detecting_Scams_in_Messaging_Applications_with_Large_Language_Models.pdf" target="_blank">Read <em>Chat or Trap?</em></a>
+  </div>
+  </div>
+  
+
+  <!-- 🎥 Video Demo Section -->
+  <h2 style="text-align: center; margin-top: 40px;">🎥 Lie to Me, I Dare You! (Demo)</h2>
+
+  <div class="grid">
+    <button onclick="playVideo('ll-legit.mp4')">1. LinkLynx vs. Legit URL</button>
+    <button onclick="playVideo('ll-phish.mp4')">2. LinkLynx vs. Phishing URL</button>
+    <button onclick="playVideo('scout-legit.mp4')">3. SCOUT vs. Legit Chat</button>
+    <button onclick="playVideo('4-scout-legit.mp4')">4. SCOUT vs. Scam Chat</button>
+    <button onclick="playVideo('scout-scam-1.mp4')">5. SCOUT & LinkLynx vs. Scam</button>
+  </div>
+
+  <h3 id="videoTitle">1. LinkLynx vs. Legit URL</h3>
+
+  <div class="player">
+    <video id="videoPlayer" width="800" controls autoplay muted>
+      <source src="videos/ll-legit.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <script>
+    const videoTitles = {
+      "ll-legit.mp4": "1. LinkLynx vs. Legit URL",
+      "ll-phish.mp4": "2. LinkLynx vs. Phishing URL",
+      "scout-legit.mp4": "3. SCOUT vs. Legit Chat",
+      "4-scout-legit.mp4": "4. SCOUT vs. Scam Chat",
+      "scout-scam-1.mp4": "5. SCOUT & LinkLynx vs. Scam"
+    };
+
+    function playVideo(filename) {
+      const player = document.getElementById("videoPlayer");
+      const title = document.getElementById("videoTitle");
+
+      player.src = "videos/" + filename;
+      title.textContent = videoTitles[filename] || "Demo Video";
+      player.load();
+      player.muted = true;
+      player.play();
+    }
+
+    function togglePoster() {
+      const container = document.getElementById("posterContainer");
+      container.style.display = container.style.display === "none" ? "block" : "none";
+    }
+  </script>
+
+</body>
+</html>
